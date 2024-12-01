@@ -63,10 +63,10 @@ y = y.fillna("Not Registered")
 
 xt, xtest, yt, ytest = train_test_split(x, y, test_size=0.3, random_state=42)
 
-# Train the SVM model
+
 model = SVC(kernel='linear')
 model.fit(xt, yt)
 
-# Make predictions and calculate accuracy
+
 y_pred = model.predict(xtest)
 print(f"Accuracy: {accuracy_score(ytest, y_pred):.2f}")
